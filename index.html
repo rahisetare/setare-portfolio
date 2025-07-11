@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Setare's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#000000',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Header/Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#00000010] backdrop-blur-lg shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-white text-xl font-bold">Setare's Portfolio</a>
+      <nav class="hidden md:flex gap-8 text-white font-medium">
+        <a href="#about" class="hover:text-blue-400 transition">About</a>
+        <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+        <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+        <a href="#certificates" class="hover:text-blue-400 transition">Certificates</a>
+        <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+      </nav>
+      <div class="md:hidden text-white text-2xl cursor-pointer" id="mobile-menu-toggle">☰</div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col bg-black px-6 py-4 text-white space-y-4">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative w-full min-h-screen flex items-center justify-center pt-28 overflow-hidden font-mono">
+    <div class="absolute inset-0 -z-10">
+      <img src="images/hero-bg.jpg" class="w-full h-full object-cover" alt="Background">
+    </div>
+
+    <div class="relative w-[80%] max-w-6xl bg-white/10 backdrop-blur-lg rounded-[2rem] px-6 py-12 md:px-20 md:py-14 text-center shadow-2xl border border-white/20 ring-1 ring-white/10 animate-fade-in-up overflow-hidden">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6 font-jetbrains">
+        Hi, I'm <span class="text-blue-400 glow-text">Setare</span><br />
+        <span class="typing pr-2">A Developer.</span>
+      </h1>
+      <p class="text-xl md:text-2xl lg:text-3xl text-[#1e3a8a] mb-10 subtitle-animate font-[Outfit,sans-serif]">
+        I craft elegant, high-performing web applications<br />
+        with clean code and creative design.
+      </p>
+      <a href="#contact" class="contact-button">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-32 text-center px-6 md:px-12">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-5xl md:text-6xl font-extrabold mb-6">I'm not just a <span class="text-purple-500">developer</span> — I design experiences.</h2>
+      <p class="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed tracking-wide font-[Outfit,sans-serif]">
+        Hey, I’m Setare Rahimi — a passionate frontend developer and creative technologist who crafts seamless, fast,
+        and joyful digital experiences.<br><br>
+        I hold an Associate's degree in IT and a Bachelor's in Software & Computer Engineering, both completed in Iran.
+        Over the years, I’ve built a deep love for exploring different programming languages and continuously expanding
+        my skill set across various stacks.<br><br>
+        I'm constantly learning, experimenting, and staying up-to-date with modern development practices — not just to
+        grow as a developer, but to push creative boundaries and build products people genuinely enjoy using.
+      </p>
+      <div class="flex justify-center gap-4">
+        <a href="#projects" class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200">See My Work</a>
+        <a href="#contact" class="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black">Let's Talk</a>
+      </div>
+    </div>
+  </section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-20">
+  <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[200px] gap-4 px-4 max-w-7xl mx-auto">
+
+    <!-- Project 1 -->
+    <div class="relative group col-span-2 row-span-2">
+      <img src="images/project1.gif" class="w-full h-full object-cover rounded-2xl shadow-xl transition-transform duration-300 group-hover:scale-105" alt="Project 1" />
+      <div class="absolute bottom-4 left-4 text-white bg-black/50 px-3 py-1 rounded-lg text-sm">Project 1</div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="relative group col-span-1 row-span-1">
+      <img src="images/project2.gif" class="w-full h-full object-cover rounded-2xl shadow-xl transition-transform duration-300 group-hover:scale-105 scale-90" alt="Project 2" />
+      <div class="absolute bottom-4 left-4 text-white bg-black/50 px-3 py-1 rounded-lg text-sm">Project 2</div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="relative group col-span-1 row-span-1">
+      <img src="images/project3.gif" class="w-full h-full object-cover rounded-2xl shadow-xl transition-transform duration-300 group-hover:scale-105 scale-90" alt="Project 3" />
+      <div class="absolute bottom-4 left-4 text-white bg-black/50 px-3 py-1 rounded-lg text-sm">Project 3</div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="relative group col-span-1 row-span-1">
+      <img src="images/project4.gif" class="w-full h-full object-cover rounded-2xl shadow-xl transition-transform duration-300 group-hover:scale-105 scale-90" alt="Project 4" />
+      <div class="absolute bottom-4 left-4 text-white bg-black/50 px-3 py-1 rounded-lg text-sm">Project 4</div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="relative group col-span-1 row-span-1">
+      <img src="images/project5.gif" class="w-full h-full object-cover rounded-2xl shadow-xl transition-transform duration-300 group-hover:scale-105 scale-90" alt="Project 5" />
+      <div class="absolute bottom-4 left-4 text-white bg-black/50 px-3 py-1 rounded-lg text-sm">Project 5</div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 text-center">
+    <h2 class="text-4xl font-bold mb-10">Skills</h2>
+    <div class="flex flex-wrap justify-center gap-8 px-4">
+      <div class="flex flex-col items-center">
+        <img src="images/icons/html.svg" class="w-12 h-12" alt="HTML" />
+        <p class="mt-2 text-sm">HTML</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/icons/css.svg" class="w-12 h-12" alt="CSS" />
+        <p class="mt-2 text-sm">CSS</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/icons/javascript.svg" class="w-12 h-12" alt="JAVASCRIPT" />
+        <p class="mt-2 text-sm">JAVASCRIPT</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/icons/bootstrap.svg" class="w-12 h-12" alt="BOOTSTRAP" />
+        <p class="mt-2 text-sm">BOOTSTRAP</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/icons/tailwind.svg" class="w-12 h-12" alt="TAILWIND" />
+        <p class="mt-2 text-sm">TAILWIND</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/icons/react.svg" class="w-12 h-12" alt="REACT" />
+        <p class="mt-2 text-sm">REACT</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/icons/nextjs.png" class="w-12 h-12" alt="NEXTJS" />
+        <p class="mt-2 text-sm">NEXTJS</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/icons/python.svg" class="w-12 h-12" alt="PYTHON" />
+        <p class="mt-2 text-sm">PYTHON</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/icons/git.svg" class="w-12 h-12" alt="GIT" />
+        <p class="mt-2 text-sm">GIT</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/icons/django.svg" class="w-12 h-12" alt="DJANGO" />
+        <p class="mt-2 text-sm">DJANGO</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="images/icons/linux.svg" class="w-12 h-12" alt="LINUX" />
+        <p class="mt-2 text-sm">LINUX</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates" class="py-20">
+    <h2 class="text-4xl font-bold text-center mb-8">Certificates</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <img src="images/cert1.jpg" class="rounded-lg shadow-lg hover:scale-105 transition" alt="Certificate 1" />
+      <img src="images/cert2.jpg" class="rounded-lg shadow-lg hover:scale-105 transition" alt="Certificate 2" />
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="pt-28 pb-20 px-6 max-w-xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-12 text-center">Contact Me</h2>
+    <form action="https://formspree.io/f/xkgbdkkg" method="POST">
+  <input type="text" name="name" placeholder="Your Name" class="w-full bg-black border border-gray-700 px-4 py-3 text-white rounded mb-4" required />
+  <input type="email" name="email" placeholder="Your Email" class="w-full bg-black border border-gray-700 px-4 py-3 text-white rounded mb-4" required />
+  <textarea name="message" placeholder="Your Message" class="w-full bg-black border border-gray-700 px-4 py-3 text-white rounded mb-4" rows="5" required></textarea>
+  <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 py-4 rounded font-semibold">Send Message</button>
+</form>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-10">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Setare's Portfolio</h3>
+        <p class="text-gray-400 text-sm">Thanks for visiting! Let’s connect and build something great together.</p>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-3">Contact</h4>
+        <ul class="text-gray-400 space-y-2 text-sm">
+          <li>📧 <a href="mailto:setarerahimi200@gmail.com">setarerahimi200@gmail.com</a></li>
+          <li>📍 Guilan, Iran</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-3">Follow Me</h4>
+        <div class="flex gap-4 text-xl">
+          <a href="https://instagram.com/setare._81" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://t.me/setare_rhm" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+          <a href="https://linkedin.com/in/your_username" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/setare12" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 text-center text-gray-500 text-sm border-t border-gray-800 pt-6">
+      &copy; 2025 Setare. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('mobile-menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

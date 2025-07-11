@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap');
+
+/* Set global font to Outfit */
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Special font class for headings (JetBrains Mono) */
+.font-jetbrains {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Enable smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ----------------- Fade In Animation ----------------- */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1.2s ease-out both;
+}
+
+/* ----------------- Typing Effect ----------------- */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 13ch; }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+.typing {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #60a5fa;
+  animation: typing 3.5s steps(13, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Glow effect for Setare text */
+.glow-text {
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 6px #60a5fa, 0 0 12px #60a5fa, 0 0 20px #516afc;
+  }
+  to {
+    text-shadow: 0 0 10px #3b82f6, 0 0 20px #2563eb, 0 0 30px #202ef3;
+  }
+}
+
+/* Subtitle reveal after typing animation */
+@keyframes fadeInUpSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subtitle-animate {
+  opacity: 0;
+  animation: fadeInUpSmooth 1.5s ease forwards;
+  animation-delay: 3.6s;
+  color: #1e40af;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  text-shadow: none !important;
+}
+
+/* Contact Me button styling */
+@keyframes fadeInUpButton {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+  background-color: #2563eb;
+  border-radius: 9999px;
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.7), 0 4px 6px -2px rgba(37, 99, 235, 0.5);
+  text-decoration: none;
+  opacity: 0;
+  animation: fadeInUpButton 1s ease forwards;
+  animation-delay: 4.2s;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-button:hover,
+.contact-button:focus {
+  background-color: #1e40af;
+  box-shadow: 0 15px 20px -5px rgba(30, 64, 175, 0.8), 0 6px 8px -3px rgba(30, 64, 175, 0.6);
+  outline: none;
+}
+
+/* Soft bounce effect for animated image */
+@keyframes softBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-soft-bounce {
+  animation: softBounce 3s ease-in-out infinite;
+}
